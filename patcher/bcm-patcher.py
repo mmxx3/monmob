@@ -146,6 +146,7 @@ if __name__ == "__main__":
 
     hash_str = sha1(firmware_data).hexdigest()
     diff_fname = hash_str + '.diff'
+    print '\firmware hash: ', diff_fname
     check_file(diff_fname, 'diff file not found (unsupported firmware?)')
    
     crcoffset = crc_offsets[hash_str]
